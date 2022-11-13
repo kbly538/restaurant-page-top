@@ -1,0 +1,47 @@
+.men {
+    margin: 200px;
+}
+
+.tab {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    
+    
+}
+
+#tab1 {
+    background-color: red;
+    position: absolute;
+    margin: 100px;
+}
+
+#tab2 {
+    background-color: green;
+    position: absolute;
+    margin: 60px;
+}
+
+#tab3 {
+    background-color: blue;
+    position: absolute;
+    margin: 20px;
+}
+
+#tab1 {
+    background-color: cyan;
+    margin-left: 300px;
+    transition: margin-left 0.3s, z-index 0.3s ease-in;
+    offset-path: path("M0,0 C20,0 200,0 200,0");
+    animation: move 3000ms infinite alternate-reverse cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    
+}
+
+@keyframes move {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
