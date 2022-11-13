@@ -8,7 +8,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Resturant',
+            title: 'Faux à la Carte',
             template: './src/index.html',
         })
     ],
@@ -24,7 +24,11 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader']
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              },
         ]
     }
 }
