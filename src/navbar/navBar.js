@@ -41,9 +41,9 @@ const styleNav = function(navbar){
     navbar.style.opacity = '80%';
 
     navbar.style.display = 'flex';
-    navbar.style.justifyContent = 'right';
-    navbar.style.gap = "10px";
+    navbar.style.justifyContent = 'space-between';
     navbar.style.alignItems = 'center';
+    navbar.style.gap = "10px";
     navbar.style.padding = '20px';
     navbar.style.paddingRight = '100px';
 
@@ -56,15 +56,28 @@ const initializeNavBar = function(){
     const navbar = createNavElement();
     styleNav(navbar);
 
+
+    const menuItemsWrapper = document.createElement('div');
+    menuItemsWrapper.style.display = 'flex';
+
     const home = createMenuItemWithId('homepage', 'Home')
     const menu = createMenuItemWithId('restaurantmenu', 'Menu')
     const contact = createMenuItemWithId('contact', 'Contact')
     styleMenuItems([home, menu, contact]);
 
 
-    navbar.appendChild(home);
-    navbar.appendChild(menu);
-    navbar.appendChild(contact);
+    const compLogo = document.createElement('h1');
+    compLogo.textContent = 'FALC';
+    compLogo.style.color = 'white';
+    compLogo.style.fontSize = '2rem';
+    compLogo.style.fontWeight = 'bold';
+
+    menuItemsWrapper.appendChild(home);
+    menuItemsWrapper.appendChild(menu);
+    menuItemsWrapper.appendChild(contact);
+
+    navbar.appendChild(compLogo);
+    navbar.appendChild(menuItemsWrapper);
     document.body.appendChild(navbar);
 }
 
