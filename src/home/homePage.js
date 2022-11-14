@@ -1,4 +1,4 @@
-import BeefImage from '../home/beef3.jpg'
+import BeefImage from '../home/pexels-valeria-boltneva-1639561.jpg'
 
 const createHomeContent = function(parent){
     parent.replaceChildren();
@@ -6,8 +6,9 @@ const createHomeContent = function(parent){
 }
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WRAPPER
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const createHomeContentWrapper = function(){
     
@@ -37,6 +38,9 @@ const styleWrapper = function(wrapper){
     wrapper.style.height = '100%';
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Hero Text
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const createHeroText = function(){
     const heroTextDiv = document.createElement('div');
@@ -81,21 +85,6 @@ const createHeroTextPara = function(str){
 
     return para;
 }
-const createHeroImage = function(){
-    const heroImage = document.createElement('img')
-    heroImage.id = 'hero-img';
-    heroImage.src = BeefImage;
-
-    
-    heroImage.style.width = '500px';
-    heroImage.style.border = '1px solid white';
-    heroImage.style.borderRadius = '20px'    
-    heroImage.style.marginBottom = '100px'
-
-
-    return heroImage;
-}
-
 
 const createHeroButton = function(){
     const btn = document.createElement('div');
@@ -119,8 +108,34 @@ const createHeroButton = function(){
     btn.style.marginTop = '30px';
     btn.style.marginLeft = '450px';
 
+    btn.addEventListener('click', ()=>{
+        document.querySelector('#restaurantmenu').click();
+    })
+
     return btn;
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Hero Image
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const createHeroImage = function(){
+    const heroImage = document.createElement('img')
+    heroImage.id = 'hero-img';
+    heroImage.src = BeefImage;
+
+    
+    heroImage.style.width = '500px';
+    heroImage.style.border = '1px solid white';
+    heroImage.style.borderRadius = '20px'    
+    heroImage.style.marginBottom = '100px'
+
+
+    return heroImage;
+}
+
+
 
 
 const homeContentWrapper = createHomeContentWrapper();

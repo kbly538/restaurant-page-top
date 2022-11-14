@@ -71,6 +71,7 @@ const initializeNavBar = function(){
     compLogo.style.color = 'white';
     compLogo.style.fontSize = '2rem';
     compLogo.style.fontWeight = 'bold';
+    compLogo.style.color = 'rgb(149, 216, 149)'
 
     menuItemsWrapper.appendChild(home);
     menuItemsWrapper.appendChild(menu);
