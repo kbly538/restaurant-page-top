@@ -19,10 +19,7 @@
   },
   "homepage": "https://github.com/kbly538/restaurant-page-top#readme",
   "devDependencies": {
-    "@squoosh/lib": "^0.4.0",
     "html-webpack-plugin": "^5.5.0",
-    "image-minimizer-webpack-plugin": "^3.8.1",
-    "imagemin": "^8.0.1",
     "sharp": "^0.31.2",
     "svgo": "^3.0.1",
     "webpack": "^5.75.0",

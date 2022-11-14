@@ -4,7 +4,7 @@ const path = require('path');
 
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         index: './src/index.js',
     },
@@ -35,33 +35,6 @@ module.exports = {
 
         ],
     },
-    optimization: {
-        minimizer: [
-          "...",
-          new ImageMinimizerPlugin({
-            minimizer: {
-              implementation: ImageMinimizerPlugin.imageminMinify,
-              options: {
-                plugins: [
-                  "imagemin-gifsicle",
-                  "imagemin-mozjpeg",
-                  "imagemin-pngquant",
-                  "imagemin-svgo",
-                ],
-              },
-            },
-            generator: [
-              {
-                // You can apply generator using `?as=webp`, you can use any name and provide more options
-                preset: "webp",
-                implementation: ImageMinimizerPlugin.imageminGenerate,
-                options: {
-                  plugins: ["imagemin-webp"],
-                },
-              },
-            ],
-          }),
-        ],
-      },
+   
 }
 
